@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Risk Assessment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Heart Disease Risk Assessment</h1>
+
+    <form action="/predict" method="post" class="input-form" style=" background-size: 100% 100%; opacity: 100%;">
+        <!-- Input fields in two columns -->
+        <div class="form-columns">
+            <div class="input-column">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" class="no-spinner" required><br><br>
+
+                <label for="sex">Sex:</label>
+                <input type="number" id="sex" name="sex" class="no-spinner" required><br><br>
+
+                <label for="chest_pain_type">Chest Pain Type:</label>
+                <input type="number" id="chest_pain_type" name="chest_pain_type" class="no-spinner"  required><br><br>
+
+                <label for="resting_bp">Resting Blood Pressure:</label>
+                <input type="number" id="resting_bp" name="resting_bp" class="no-spinner" required><br><br>
+
+                <label for="cholesterol">Cholesterol:</label>
+                <input type="number" id="cholesterol" name="cholesterol" class="no-spinner" required><br><br>
+            </div>
+            <div class="input-column">
+                <label for="fasting_bs">Fasting Blood Sugar:</label>
+                <input type="number" id="fasting_bs" name="fasting_bs" class="no-spinner" required><br><br>
+
+                <label for="resting_ecg">Resting ECG:</label>
+                <input type="number" id="resting_ecg" name="resting_ecg" class="no-spinner" required><br><br>
+
+                <label for="max_hr">Maximum Heart Rate:</label>
+                <input type="number" id="max_hr" name="max_hr" class="no-spinner" required><br><br>
+
+                <label for="exercise_angina">Exercise Induced Angina:</label>
+                <input type="number" id="exercise_angina" name="exercise_angina" class="no-spinner" required><br><br>
+
+                <label for="oldpeak">Oldpeak:</label>
+                <input type="number" id="oldpeak" name="oldpeak" class="no-spinner" step="0.1" required><br><br>
+            </div>
+        </div>
+        <div class="centered-fields">
+            <label for="st_slope">ST Slope:</label>
+            <input type="number" id="st_slope" name="st_slope" class="no-spinner" required><br><br>
+        </div>
+        <div class="submit-button">
+            <input type="submit" value="Predict">
+        </div>
+    </form>
+</body>
+</html>
